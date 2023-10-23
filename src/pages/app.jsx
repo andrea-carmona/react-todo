@@ -9,10 +9,10 @@ function App() {
   const [tasks, setTasks] = React.useState([]);
   
   const addTask = (taskName) => {
-    const isTaskNameInTask = tasks.find((tasks) => tasks.includes(taskName));
+    const isTaskNameInTask = tasks.includes( taskName.toLowerCase());
 
     if (!isTaskNameInTask && taskName !== '' ) {
-      setTasks([...tasks, taskName]);
+      setTasks([...tasks, taskName.toLowerCase()]);
     }
 
   };

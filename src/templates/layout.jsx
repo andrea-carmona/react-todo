@@ -4,7 +4,7 @@ function Layout( {children}) {
     return(
         <div className="container">
             <header>{headerComponent}</header>
-            <div className="add-task">{addTaskComponent}</div>
+            <div className="add-task-component">{addTaskComponent}</div>
             <div className="tasks-group">{taskGroupComponent}</div>
         </div>
     )

@@ -34,7 +34,7 @@ header{
   flex-basis: 300px;
 }
 
-.add-task{
+.add-task-component{
   flex-basis: 50px;
 }
 
@@ -71,6 +71,7 @@ header{
   flex-direction: row;
   align-items: center;
   padding: 10px 0;
+  width: 100%;
 }
 
 .add-task div:first-child {
@@ -90,7 +91,6 @@ header{
 
 .add-task button {
   width: 60px;
-  height: 40px;
 }
 
 

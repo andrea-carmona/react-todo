@@ -9,23 +9,26 @@ function AddTask({onAddClick}) {
     setAddTaskIpt(e.target.value);
   }
 
-  const handleOnAddClick = () => {
+  const handleOnAddClick = (e) => {
+    // console.log('in here')
+    e.preventDefault();
+
     onAddClick(addTaskIpt);
     setAddTaskIpt("");
   };
   
   return (
-    <div className="add-task">
-      <div>
-        <input type="text" name="add-task-ipt" id="add-task-ipt" value={addTaskIpt} onChange={handleInputChange} />
+    <form onSubmit={handleOnAddClick}>
+      <div className="add-task">
+        <div>
+          <input type="text" name="add-task-ipt" id="add-task-ipt" value={addTaskIpt} onChange={handleInputChange} />
         </div>
-      <div>
-        <button className="task-btn" onClick={handleOnAddClick}>
-         add 
-        </button>
+        <div>
+          <button className="task-btn" type="submit"  onClick={handleOnAddClick}> Add </button>
+        </div>
       </div>
-    </div>
-    );
+    </form>
+  );
 }
 
 export default AddTask;
