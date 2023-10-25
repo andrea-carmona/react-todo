@@ -1,22 +1,21 @@
 import React from "react";
 
-import Layout from "../templates/layout";
-import Header from "../molecules/header";
 import AddTask from "../organisms/add-task";
+import Header from "../molecules/header";
+import Layout from "../templates/layout";
 import TasksGroup from "../organisms/tasks-group";
 
 function App() {
   const [tasks, setTasks] = React.useState([]);
   
   const addTask = (taskName) => {
-    const isTaskNameInTask = tasks.includes( taskName.toLowerCase());
+    const isValidTaskName = !tasks.includes(taskName.toLowerCase()) && taskName !== '';
 
-    if (!isTaskNameInTask && taskName !== '' ) {
+    if (isValidTaskName) {
       setTasks([...tasks, taskName.toLowerCase()]);
     }
 
   };
-
 
   const deleteTask = (tasktoDelete) => {
     const filteredTasksList = tasks.filter((task) => task !== tasktoDelete);

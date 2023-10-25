@@ -1,6 +1,8 @@
 import "../styles/styles.css";
+
 function Layout( {children}) {
     const [headerComponent, addTaskComponent, taskGroupComponent] = children;
+    
     return(
         <div className="container">
             <header>{headerComponent}</header>
@@ -9,4 +11,5 @@ function Layout( {children}) {
         </div>
     )
 }
+
 export default Layout;

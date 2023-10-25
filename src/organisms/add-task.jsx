@@ -10,8 +10,7 @@ function AddTask({onAddClick}) {
   }
 
   const handleOnAddClick = (e) => {
-    // console.log('in here')
-    e.preventDefault();
+     e.preventDefault();
 
     onAddClick(addTaskIpt);
     setAddTaskIpt("");
